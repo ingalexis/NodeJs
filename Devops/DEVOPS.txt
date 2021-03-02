@@ -1,8 +1,23 @@
 1) ¿Que es DEVOPS?
 
-Es una serie de herramientas que nos ayudan en la integreación durante el desarrollo de las aplicaciones.
+- Es una serie de herramientas que nos ayudan en la integración durante el desarrollo de las aplicaciones.
 
 2) Ideas para generar más empatía, confianza y seguridad psicológica en el equipo.
 
 - Realizar reuniones con ambientes de confianza (Juegos, retos, etc) y en ellas hacer juegos de preguntas sobre los pasatiempos o sobre el trabajo.
-- Hacer reuniones de intercambio de ideas sobre algun reto en el que todos puedan participar.
+
+- Hacer reuniones de intercambio de ideas sobre algún reto en el que todos puedan participar.
+
+3)
+
+a. Herramientas que podrían compartir con los demás departamentos para una mejor colaboración.
+
+- Trello para la organización de las tareas, y podría haber un canvan que compartan entre varias áreas dentro de la compañía para estar enterados en que procesos van los demás.
+
+b. Estructura para que exista una comunicación con todos los departamentos de la empresa: Pueden realizar un diagrama.
+
+- Tener comunicación a través de noticias cortas, pueden ser enviadas por correo o por la página principal de la empresa.
+
+c. Mecanismo para la toma de decisiones (e.g. Votación electrónica anónima, Un consejo de arquitectos, etc.)
+
+- Votación normal, si la votación esta dividida, darle la oportunidad a las partes de dar su razón.
