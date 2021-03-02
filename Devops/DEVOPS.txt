@@ -1,3 +1,8 @@
-¿Que es DEVOPS?
+1) ¿Que es DEVOPS?
 
 Es una serie de herramientas que nos ayudan en la integreación durante el desarrollo de las aplicaciones.
+
+2) Ideas para generar más empatía, confianza y seguridad psicológica en el equipo.
+
+- Realizar reuniones con ambientes de confianza (Juegos, retos, etc) y en ellas hacer juegos de preguntas sobre los pasatiempos o sobre el trabajo.
+- Hacer reuniones de intercambio de ideas sobre algun reto en el que todos puedan participar.
