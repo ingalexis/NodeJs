@@ -32,8 +32,11 @@ class Histogram {
 	}
 	
 	toString() {
+		// No conozco la notación de los tres puntos
 		let entries = [...this.letterCount];
 		
+		// No habia utilizado las funciones sort, filter, map, join
+
 		entries.sort((a,b)=>{
 			if(a[1]===b[1]) {
 				return a[0] < b[0]? -1 : 1;
@@ -54,6 +57,7 @@ class Histogram {
 }
 
 async function histogramFromStdin(){
+	// Tampoco conocia sobre stdin
 	process.stdin.setEncoding("utf-8");
 	let histogram = new Histogram();
 	for await (let chunk of process.stdin) {
