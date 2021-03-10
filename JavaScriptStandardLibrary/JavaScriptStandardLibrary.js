@@ -107,4 +107,35 @@ console.log([...mapSeven.entries()]);
 mapSeven.forEach((value, key) => console.log(`llave ${key} - valor ${value}`));
 
 
+/*
+*	Array Typed: Los elementos de una typed arrays son todos numeros. permiten especificar
+* tipo y el tamaño de los numeros que se almacenaran en la raiz.
+* se debe especificar la longitud de una matriz con tipo cuando se crea y esa longitud nunca puede cambiar,
+* los elementos de una matriz con tipo siempre se inicializan en 0 cuado se crea.
+*/
+
+
+let bytes = new Uint8Array(1024); // 1024 bytes
+let matrix = new Foat64Array(9); // matriz 3 x 3
+let point = new Int16Array(3); // un punto en un espacio de 3D
+let rgba = new Uint8ClampedArray(4); // un valor de pixel rgba de 4 bytes
+
+let white = Uint8ClampedArray.of(255, 255, 255, 0); // creamos el color blanco
+let ints = Uint32Array.from(white); // los mismos cuatro numeros pero enteros
+
+console.log(Uint8Array.of(1.23, 2.99, 45000));
+
+/*
+* Referencia opaca
+*/
+
+let buffer = new ArrayBuffer(1024 * 1024); 
+console.log(buffer.byteLength);
+let asBytes = new Uint8Array(buffer);
+let asInts = new Int32Array(buffer);
+ 
+
+
+
+
 
