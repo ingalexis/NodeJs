@@ -269,9 +269,15 @@ console.log(`index: ${match.input}`);
 console.log(`index: ${match.groups}`);
 
 
+/*
+* Split: Este metodo divide la cadena en una matriz utilizando como argumento un separador.
+*/
 
+console.log("1,2,3".split(","));
+console.log("1,2,3,\n4, 5".split(/\s*,\s*/));
 
-
+const htmlTag = /<([^>]+)>/;  // < followed by one or more non->, followed by >
+console.log("Testing<br/>1,2,3".split(htmlTag));  // => ["Testing", "br/", "1,2,3"]
 
 
 
