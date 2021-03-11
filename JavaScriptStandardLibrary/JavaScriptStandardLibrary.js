@@ -155,6 +155,11 @@ let pattern = new RegExp("s$"); // $ metacaracter especial (flag)
 *
 * . :  Cualquier carácter excepto nueva línea u otro terminador de línea Unicode. O, si la expresión regular usa la marca s,
 * 		 entonces un punto coincide con cualquier carácter, incluidos los terminadores de línea.
+* ^ Haga coincidir el comienzo de la cadena o, con la bandera m, el comienzo de una línea.
+* $ Haga coincidir el final de la cadena y, con la bandera m, el final de una línea.
+* \b Coincide con el límite de una palabra. Es decir, haga coincidir la posición entre un carácter \w y un carácter \W o entre un carácter \w y el principio o el final de una cadena. (Tenga en cuenta, sin embargo, que [\b] coincide con retroceso).
+* \B Coincidir con una posición que no sea un límite de palabras.
+* 
 */
 
 let pattern = /[abc]/; // Coincide con cualquiera de las letras a, b y c
@@ -186,7 +191,8 @@ let pattern = /[^...]/; // Cualquier caracter que no este entre corchetes
 *	\d Cualquier dígito ASCII. Equivalente a [0-9].
 *	\D Cualquier carácter que no sea un dígito ASCII. Equivalente a [^0-9].
 *	[\b]	Un retroceso literal (caso especial).
-*
+* (? = p) Una afirmación de anticipación positiva. Requiere que los siguientes caracteres coincidan con el patrón p, pero no los incluyas en la coincidencia.
+* (?!p) Una afirmación de anticipación negativa. Requiere que los siguientes caracteres no coincidan con el patrón p.
 */
 
 let pattern = /\d/; // Coincide con un digito entre 0 y 9
