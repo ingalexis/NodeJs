@@ -403,3 +403,114 @@ console.log(now.toLocaleTimeString());
 // Transformacion de cadenas a fechas, queda en milisegundos
 let transform = Date.parse("2021/01/06");
 console.log(transform);
+
+
+/*
+* Class Error -> throws
+*
+*
+*
+*/
+
+class HTTPError extends Error {
+	
+	constructor (status, statusText, URL) {
+		super(`${status} ${statusText}: ${URL}`);	
+
+		this.status = status;
+		this.statusText = statusText;
+		this.URL = URL;
+	}
+	
+	get name () {
+		return "HTTPError"; 
+	}	
+	
+}
+
+let error = new HTTPError(404, "Not Found", "http://example.com");
+console.log(error.status);
+console.log(error.message);
+console.log(error.URL);
+
+class NumberFormatError extends Error {
+	
+	constructor (operacion, statusText, numero) {
+		super(`${operacion} ${statusText}: ${numero}`);	
+
+		this.operacion = operacion;
+		this.statusText = statusText;
+		this.numero = numero;
+	}
+	
+	get name () {
+		return "NumberFormatError"; 
+	}	
+	
+}
+
+let errorNumerico = new NumberFormatError("Multiplicación", "Parse Text", "R");
+console.log(errorNumerico.operacion);
+console.log(errorNumerico.statusText);
+console.log(errorNumerico.numero);
+
+
+class DateFormatError extends Error {
+	
+	constructor (operacion, statusText, fecha) {
+		super(`${operacion} ${statusText}: ${fecha}`);	
+
+		this.operacion = operacion;
+		this.statusText = statusText;
+		this.fecha = fecha;
+	}
+	
+	get name () {
+		return "DateFormatError"; 
+	}	
+	
+}
+
+let errorDate = new DateFormatError("Parse", "Invalid Date", "2020/23/23");
+console.log(errorDate.operacion);
+console.log(errorDate.statusText);
+console.log(errorDate.fecha);
+
+function validateNumero(numero) {
+	let condicion = /[^0-9]+/;
+	if (numero.match(condicion).length == null) {
+		throw new NumberFormatError("Is Number", "El valor no es un numero.", numero);
+	}
+}
+
+try {
+	validateNumero("x");
+} catch (error) {
+	console.error(error.name);
+	console.error(error.message);
+	console.error(error.stack);
+}
+
+function validaFecha (fecha) {
+	let condicion = /\d{1,2}\/\d{1,2}\/\d{4}/; // Formato de fecha dd/mm/aaaa
+	let condicion2 = /\d{1,2}\-\d{1,2}\-\d{4}/; // Formato de fecha dd-mm-aaaa
+	if (fecha.match(condicion) == null && fecha.match(condicion2) == null) { 
+		throw new DateFormatError("DateFormat", "Formato de fecha no valido", fecha);
+	}
+}
+
+try {
+	validaFecha("22/22/2222");
+} catch (error) {
+	console.error(error.operacion);
+	console.error(error.message);
+	console.error(error.stack);
+}
+
+
+
+
+
+
+
+
