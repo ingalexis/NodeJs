@@ -287,29 +287,119 @@ console.log("Testing<br/>1,2,3".split(htmlTag));  // => ["Testing", "br/", "1,2,
 
 
 
+/*
+* Date and Times:
+* La clase date es la api de javascript para trabajar con fechas y horas.
+*/
+
+let startTime = Date.now();
+
+let now = new Date();
+console.log(now);
+
+let epoch = new Date(0);
+console.log(epoch);
+
+let century = new Date(2100, // año
+	0, // enero
+	1, // primero del mes
+	2, 3, 4, 5); // 02:03:04:005 Hora local
+console.log(century);
+
+let century2 = new Date(2100, // año
+	0, // enero
+	1, // primero del mes
+	); // deja las horas en cero, media noche
+console.log(century2);
+
+/*
+* UTC: tiempo universal cordinado
+* Es el principal estandar de tiempo por el cual el mundo regula los relojes
+*/
+
+let century3 = Date.UTC(2100,0,1);
+console.log(century3); // devulve una marca de tiempo en milisegundos
+
+let century4 = new Date(Date.UTC(2100,0,1)); // convertirlo en fecha normal
+console.log(century4);
+
+console.log(now.getDay());
+console.log(now.getMonth());
+console.log(now.getFullYear());
+console.log(now.getHours());
+console.log(now.getMinutes());
+console.log(now.getSeconds());
+console.log(now.getMilliseconds());
+console.log(now.getTime());
+console.log(now.getTimezoneOffset());
+console.log(now.getDate());
 
 
+console.log(now.getUTCDay());
+console.log(now.getUTCMonth());
+console.log(now.getUTCFullYear());
+console.log(now.getUTCHours());
+console.log(now.getUTCMinutes());
+console.log(now.getUTCSeconds());
+console.log(now.getUTCMilliseconds());
+console.log(now.getUTCDate());
 
 
+console.log(now);
+now.setDate(30);
+now.setMonth(05);
+now.setFullYear(1996);
+now.setHours(07);
+now.setMinutes(23);
+now.setSeconds(50);
+now.setMilliseconds(30);
+console.log(now);
 
 
+console.log(now);
+now.setUTCDate(28);
+now.setUTCMonth(01);
+now.setUTCFullYear(1964);
+now.setUTCHours(04);
+now.setUTCMinutes(43);
+now.setUTCSeconds(20);
+now.setUTCMilliseconds(22);
+console.log(now);
+
+// Javascript maneja las fechas en milisegundos
+// Admite 8.640.000.000.000.000 de milisegundos. equivale a 270.000 años
+
+now.setTime(now.getTime()+30000); // Agrega 30 segundos
+console.log(now);
 
 
+let endTime = Date.now();
 
+console.log("Tiempo de ejecución: " + (endTime-startTime));
 
+// Convertir fecha a texto con toString
 
+let fechaText = now.toString();
+console.log(fechaText);
 
+let fechaTextUTC = now.toUTCString();
+console.log(fechaTextUTC);
 
+// Este formato imprime Año-mes-dia hora:minutos:segundos.milisegundos. La T separa la fecha de la hora
+// La Z especifica hora local
+let toIsoString = now.toISOString(); 
+console.log(toIsoString);
 
+console.log(now.toLocaleString()); // convertir a fecha local
 
+console.log(now.toDateString()); // Transformacion solo fecha
 
+console.log(now.toLocaleDateString()); //
 
+console.log(now.toTimeString());
 
+console.log(now.toLocaleTimeString());
 
-
-
-
-
-
-
-
+// Transformacion de cadenas a fechas, queda en milisegundos
+let transform = Date.parse("2021/01/06");
+console.log(transform);
