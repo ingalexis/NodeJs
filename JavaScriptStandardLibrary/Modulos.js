@@ -65,7 +65,7 @@ modules['stats.js'] = (function() {
 	}
 	
 	exports.stdDev = function (data) {
-		let m = mean(data);
+		let m = exports.mean(data);
 		return Math.sqrt(
 			data.map(x => x - m).map(square).reduce(sum)/(data.length - 1)
 		);
@@ -86,7 +86,7 @@ modules['calculadora.js'] = (function() {
 }());
 
 const stats2 = require('stats.js');
-const calculadora2 = require('multiplicar.js');
+const calculadora2 = require('calculadora.js');
 
 console.log(stats2.mean([1, 3, 5, 7, 9]));
 console.log(stats2.stdDev([1, 3, 5, 7, 9]));
