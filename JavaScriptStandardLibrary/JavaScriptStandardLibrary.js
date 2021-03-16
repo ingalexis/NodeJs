@@ -116,7 +116,7 @@ mapSeven.forEach((value, key) => console.log(`llave ${key} - valor ${value}`));
 
 
 let bytes = new Uint8Array(1024); // 1024 bytes
-let matrix = new Foat64Array(9); // matriz 3 x 3
+let matrix = new Float64Array(9); // matriz 3 x 3
 let point = new Int16Array(3); // un punto en un espacio de 3D
 let rgba = new Uint8ClampedArray(4); // un valor de pixel rgba de 4 bytes
 
@@ -140,9 +140,9 @@ let asInts = new Int32Array(buffer);
 * Una expresión regular es un objeto que describe un patrón textual
 */
 
-let pattern = /s$/i; // la cadena que al final tenga una s y la 'i' indica que no importa si es mayuscula o minuscula
+let pattern1 = /s$/i; // la cadena que al final tenga una s y la 'i' indica que no importa si es mayuscula o minuscula
 
-let pattern = new RegExp("s$"); // $ metacaracter especial (flag)
+let pattern2 = new RegExp("s$"); // $ metacaracter especial (flag)
 
 
 /*
@@ -162,13 +162,13 @@ let pattern = new RegExp("s$"); // $ metacaracter especial (flag)
 * 
 */
 
-let pattern = /[abc]/; // Coincide con cualquiera de las letras a, b y c
-let pattern = /[^abc]/; // Concide con cualquier caracter que no sea a, b o c
-let pattern = /[a-z]/; // Coincide con cualquier caracter en minuscula del alfabeto latino
-let pattern = /[a-zA-Z]/; // igual tambien mayusculas
-let pattern = /[a-zA-Z0-9]/; // igual tambien numeros
-let pattern = /[...]/; // Cualquier caracter entre corchetes
-let pattern = /[^...]/; // Cualquier caracter que no este entre corchetes
+let pattern3 = /[abc]/; // Coincide con cualquiera de las letras a, b y c
+let pattern4 = /[^abc]/; // Concide con cualquier caracter que no sea a, b o c
+let pattern5 = /[a-z]/; // Coincide con cualquier caracter en minuscula del alfabeto latino
+let pattern6 = /[a-zA-Z]/; // igual tambien mayusculas
+let pattern7 = /[a-zA-Z0-9]/; // igual tambien numeros
+let pattern8 = /[...]/; // Cualquier caracter entre corchetes
+let pattern9 = /[^...]/; // Cualquier caracter que no este entre corchetes
 
 /*
 * Repeticiones en expresiones regulares
@@ -195,15 +195,15 @@ let pattern = /[^...]/; // Cualquier caracter que no este entre corchetes
 * (?!p) Una afirmación de anticipación negativa. Requiere que los siguientes caracteres no coincidan con el patrón p.
 */
 
-let pattern = /\d/; // Coincide con un digito entre 0 y 9
-let pattern = /\d\d/; // Coincide con dos digitos entre 0 y 9
+let pattern10 = /\d/; // Coincide con un digito entre 0 y 9
+let pattern11 = /\d\d/; // Coincide con dos digitos entre 0 y 9
 
-let pattern = /\d{2,4}/; // Coincide entre 2 y 4 digitos
-let pattern = /\w{3}\d?/; // Coincide tres caracteres de palabra y un digito opcional
+let pattern12 = /\d{2,4}/; // Coincide entre 2 y 4 digitos
+let pattern13 = /\w{3}\d?/; // Coincide tres caracteres de palabra y un digito opcional
 
-let pattern = /\s+java\s+/; // Coincide con java con uno o mas espacios antes y despues
+let pattern14 = /\s+java\s+/; // Coincide con java con uno o mas espacios antes y despues
 
-let pattern = /[^(]*/; // Coincide con 0 o mas caracteres que no sean parentesis abiertos
+let pattern15 = /[^(]*/; // Coincide con 0 o mas caracteres que no sean parentesis abiertos
 
 
 
@@ -234,28 +234,24 @@ let pattern = /[^(]*/; // Coincide con 0 o mas caracteres que no sean parentesis
 */
 
 console.log("JavaScript".search(/script/ui));
-
 console.log("Python".search(/script/ui));
-​
 let text = "javascript";
-​
 text = text.replace(/javascript/gi, "JavaScript");
-​
 console.log(text);
 
 
 let times = "15 times 15 is 225";
 console.log(times.replace(/\d+/gu, n => parseInt(n).toString(16))); // Transformamos lo numeros en hexadecimal
 
-let text = "7 plus 8 equals 15";
-console.log(text.match(/\d+/g)); 
+let text2 = "7 plus 8 equals 15";
+console.log(text2.match(/\d+/g)); 
 // [7, 8, 14]
 
 // Ejemplo match
 
 let url = /(\w+):\/\/([\w.]+)\/(\S*)/;
-let text = "visit my blog https://zoom.us/j/92769666327?pwd=bU5vQTFBbC81LzVPamFBd0Y3UEJydz09";
-let match = text.match(url);
+let text3 = "visit my blog https://zoom.us/j/92769666327?pwd=bU5vQTFBbC81LzVPamFBd0Y3UEJydz09";
+let match = text3.match(url);
 let fullUrl, protocol, host, path;
 
 if (match != null) {
@@ -543,3 +539,113 @@ console.log(JSON.parse(JSON.stringify(object, null, 2))); // El parse ignora los
 
 let euros =  Intl.NumberFormat("es", {style: "currency", currency: "EUR"});
 console.log(euros.format(10));
+
+let data = [0.05, 0.75, 1];
+let formatData = Intl.NumberFormat(undefined,{style:"percent", minimumFractionDigits: 1, maximumFractionDigits:1}).format;
+console.log(data.map(formatData));
+
+let arabic = Intl.NumberFormat("ar", {useGrouping: false}).format;
+console.log(arabic(1234567890));
+
+let indi = Intl.NumberFormat("hi-IN-u-nu-deva").format;
+console.log(indi(1234567890));
+
+let date = new Date("2021-03-16T08:54:15Z");
+console.log(date);
+console.log(Intl.DateTimeFormat("en-US").format(date));
+console.log(Intl.DateTimeFormat("fr-FR").format(date));
+console.log(Intl.DateTimeFormat("es-ES").format(date));
+
+// Deletrear dia de la semana y mes
+
+let opts = {
+	weekday: long,
+	month: long,
+	year: "numeric",
+	day: "numeric"
+};
+console.log(Intl.DateTimeFormat("en-US", opts).format(date));
+
+otps = {
+	hour: "numeric",
+	minute: "2-digits",
+	hour12:  true
+}
+
+console.log(Intl.DateTimeFormat("en-US", opts).format(date));
+
+// calendarios no cristianos 
+console.log(Intl.DateTimeFormat("en-u-ca-hebrew", opts).format(date));
+
+let opts2 = {
+	year: "numeric",
+	era: "short"
+};
+
+console.log(Intl.DateTimeFormat("en-u-ca-hebrew", opts2).format(date));
+console.log(Intl.DateTimeFormat("en-u-ca-buddhist", opts2).format(date));
+console.log(Intl.DateTimeFormat("en-u-ca-chinese", opts2).format(date));
+console.log(Intl.DateTimeFormat("en-u-ca-persian", opts2).format(date));
+
+let url2 = new URL("https://example.com:8080/path/name?q=term#fragment");
+console.log(url2.href);
+console.log(url2.origin);
+console.log(url2.protocol);
+console.log(url2.host);
+console.log(url2.hostname);
+console.log(url2.port);
+console.log(url2.pathname);
+console.log(url2.search);
+console.log(url2.hash);
+
+let url3 = new URL("ftp://admin:1337!@ftp.example.com/");
+console.log(url3.username);
+console.log(url3.password);
+console.log(url3.protocol);
+
+let url4 = new URL("https://example.com");
+console.log(url4.pathname="api/search");
+console.log(url4.search="q=test");
+console.log(url4.toString());
+
+let url5 = new URL("https://example.com/search");
+console.log(url5.search);
+console.log(url5.searchParams.append("q", "test"));
+console.log(url5.search);
+url5.searchParams.set("q","x");
+console.log(url5.search);
+console.log(url5.searchParams.get("q"));
+console.log(url5.searchParams.has("q"));
+url5.searchParams.append("others", "w");
+console.log(url5.search);
+url5.searchParams.append("others", "b");
+console.log(url5.search);
+console.log(url5.searchParams.getAll("others"));
+url5.searchParams.sort();
+console.log(url5.search);
+console.log([...url5.searchParams]);
+url5.searchParams.delete("others");
+console.log(url5.search);
+
+
+/*
+* TIMERS
+* Son funciones que solicitan al navegador que invoque cierta función despues de cierto tiempo.
+* Funciona en todos los navegadores
+*/
+
+setTimeout(()=>{console.log("Ready...");}, 1000);
+setTimeout(()=>{console.log("Set...");}, 2000);
+setTimeout(()=>{console.log("Go...");}, 3000);
+
+let clock = setInterval(() => {
+	console.clear();
+	console.log(new Date().toLocaleTimeString());
+}, 1000);
+
+setTimeout(() => {
+	clearInterval(clock);	
+}, 10000);
+
+console.log();
+
