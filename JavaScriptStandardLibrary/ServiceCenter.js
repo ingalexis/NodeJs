@@ -21,7 +21,7 @@ class NumberFormatError extends Error {
 
 function validarNumero(numero) {
 	let condicion = /[^0-9]+/;
-	if ((numero+"").match(condicion) == null) {
+	if ((numero+"").match(condicion) != null) {
 		throw new NumberFormatError("Error Numero", "El numero no es valido.", numero);
 	}
 }
