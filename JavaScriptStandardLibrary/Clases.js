@@ -98,3 +98,29 @@ console.log(new Square(4).area);
 
 let squareObject = new Square(7);
 console.log(squareObject.area);
+
+/*
+* static define que hace parte solo del constructor
+*/
+
+
+class Cuadrado {
+	static calcularCuadrado(num) {
+		return num * num;
+	}
+	
+	static texto = "Hello";
+	#propiedadPrivada = 0; // desde el 2020
+	
+	metodoAbstracto() {
+		throw new Error("Metodo abstracto");
+	}
+}
+
+let cuadrado = Cuadrado.calcularCuadrado(6);
+console.log(cuadrado);
+console.log(Cuadrado.texto);
+
+let cuadrado2 = new Cuadrado();
+console.log(cuadrado2.propiedadPrivada);
+
