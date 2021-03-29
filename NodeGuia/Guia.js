@@ -330,5 +330,51 @@ fsExtra.remove(folder)
 /**
  * NX
  * 
+ * crear la aplicacion
+ * npx create-nx-workspace@latest
+ * 
+ * instalar nx
+ * npm install -g nx
+ * 
+ * iniciar servidor
+ * nx serve todos
+ * 
+ * http://localhost:3333/api
+ * 
+ * crear el servicio
+ * nx generate @nrwl/nest:service todo --project todos --directory app
+ * 
+ *  
+ * apps/todos/src/app/todo/todo.service.ts
+ * 
+ * npm install --save hbs
+ * 
+ * main.ts
+ * 
+ * index.hbs
+ * 
+ * app.controller.ts
+ * 
+ * volvemos a correr servidor
+ * 
+ * nx g @nrwl/workspace:lib data
+ * 
+ * libs/data/src/lib/data.ts
+ * 
+ * apps/todos/src/app/todos/todos.service.ts
+ * 
+ * nx g @nrwl/nest:lib auth --controller
+ * 
+ * libs/auth/src/lib/auth.controller.ts
+ * 
+ * apps/todos/src/app/app.module.ts
+ * 
+ * http://localhost:3333/auth
+ * 
  * nx dep-graph
+ * 
+ * cache
+ * nx run todos:build
+ * nx run todos:build
+ * 
  */
