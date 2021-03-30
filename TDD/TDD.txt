@@ -11,4 +11,8 @@ de cada producto, la cantidad, el precio final sin iva y con iva, tambien que mu
 - Vender electrodomestico: Se necesecita que para vender un electrodomestico se ingrese el codigo, se de una descripción del producto,
     un resumen de la cuenta que muestre el iva, total sin iva y total con iva.
 
+- Consultar electrodomestico por codigo.
+- Registrar factura a partir de un codigo.
+- Mostrar total factura.
+
 - Mostrar stock: Mostrar de forma entendible los electrodomesticos que hay en stock con sus descripciones y precios.
