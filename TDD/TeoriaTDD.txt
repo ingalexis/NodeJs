@@ -32,7 +32,10 @@ TDD (Test Driven Development)
 
 - Ejecute todas las pruebas
 
-*
+* Pruebas
+
+- Pruebas de caja negra: Se limita a probar solo por encima si hace la tarea.
+- Pruebas de caja blanca: Por lo contrario prueba todo hasta lo que hace internamente. Revisa el software y conoce todo el sistema.
 
 
 
