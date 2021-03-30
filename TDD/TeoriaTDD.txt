@@ -1,0 +1,38 @@
+
+TDD (Test Driven Development)
+
+- Es un procedimiento simple de escribir pruebas antes de la implementacion real
+- Es una inversión de un enfoque tradicional donde las pruebas se realizan despues de que se escribe el código
+- Se basa en la metodologia XP
+- El procedimiento que impulsa este ciclo se llama red-green-refactor
+- Si algo se hizo mal desde el inicio es mejor empezar eso desde cero
+- 
+
+* Porqué ?
+
+- Los clientes no sienten que lo que se entrego es lo que pidieron
+- La documentación nunca esta actualizada
+- Miedo al implementar en producción porque se desconoce el resultado
+- A menudo no se puede implementar en producción porque las pruebas de regresión tardan mucho en ejecutarse
+- El equipo pasa demasiado tiempo tratando de averiguar que hace algún metodo o clase
+- TDD no resuelve magicamente todos estos problemas
+- No existe formula magica 
+
+* Refactor Rojo-Verde
+
+- Escribe una prueba (Pensando en como va a hacer el requerimiento)
+
+- Ejecute todas las pruebas 
+
+- Escribe el código de implementacion
+
+- Ejecute todas las pruebas
+
+- Refactor
+
+- Ejecute todas las pruebas
+
+*
+
+
+

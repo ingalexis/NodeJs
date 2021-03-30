@@ -1,0 +1,7 @@
+
+IDEA DE NEGOCIO
+
+Venta de Electrodomesticos
+
+Tienda de venta de electrodomesticos, que en la factura nos muestre cuanto iva se esta pagando
+de cada producto, la cantidad, el precio final sin iva y con iva, tambien que muestre un stock.
