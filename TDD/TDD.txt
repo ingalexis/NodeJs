@@ -6,13 +6,15 @@ Venta de Electrodomesticos
 Tienda de venta de electrodomesticos, que en la factura nos muestre cuanto iva se esta pagando
 de cada producto, la cantidad, el precio final sin iva y con iva, tambien que muestre un stock.
 
-* Requerimientos
+* Requerimientos y Especificaciones
 
-- Vender electrodomestico: Se necesecita que para vender un electrodomestico se ingrese el codigo, se de una descripción del producto,
-    un resumen de la cuenta que muestre el iva, total sin iva y total con iva.
+** Vender electrodomestico
 
 - Consultar electrodomestico por codigo.
-- Registrar factura a partir de un codigo.
+- Agregar productos por codigo.
+- Registrar factura.
 - Mostrar total factura.
 
-- Mostrar stock: Mostrar de forma entendible los electrodomesticos que hay en stock con sus descripciones y precios.
+** Mostrar stock: 
+
+- Mostrar electrodomesticos con descripciones y precios.
