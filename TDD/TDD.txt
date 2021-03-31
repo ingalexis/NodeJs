@@ -11,10 +11,23 @@ de cada producto, la cantidad, el precio final sin iva y con iva, tambien que mu
 ** Vender electrodomestico
 
 - Consultar electrodomestico por codigo.
-- Agregar productos por codigo.
+- Agregar productos a la factura por codigo.
 - Registrar factura.
 - Mostrar total factura.
 
 ** Mostrar stock: 
 
 - Mostrar electrodomesticos con descripciones y precios.
+
+* Pseudopruebas
+
+1. Vender electrodomestico
+
+Prueba 1: Ingresar el codigo de un electrodomestico y comprobar que devuelva la descripcion correcta
+Prueba 2: Ingresar el codigo a la factura y verificar que haya sido ingresado
+Prueba 3: Comprobar elementos en la factura al momento de registrar
+Prueba 4: Comprobar valore de la factura
+
+2. Mostrar stock: 
+
+Prueba 1: Comprobar que al mostrar los electrodomesticos en stock sean las cantidades y descripciones correctas
