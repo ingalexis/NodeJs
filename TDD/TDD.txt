@@ -26,7 +26,7 @@ de cada producto, la cantidad, el precio final sin iva y con iva, tambien que mu
 Prueba 1: Ingresar el codigo de un electrodomestico y comprobar que devuelva la descripcion correcta
 Prueba 2: Ingresar el codigo a la factura y verificar que haya sido ingresado
 Prueba 3: Comprobar elementos en la factura al momento de registrar
-Prueba 4: Comprobar valore de la factura
+Prueba 4: Comprobar valores de la factura
 
 2. Mostrar stock: 
 
