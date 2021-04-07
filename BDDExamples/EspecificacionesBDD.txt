@@ -1,0 +1,15 @@
+Feature: Pruebas a la venta y consulta de Electrodomesticos
+
+
+Escenario: Vender electrodomestico
+    Dado se consulte un electrodomestico por codigo
+    Cuando la consulta arroje un valor
+    Entonces agregar el producto a la factura por codigo.
+    Dado el producto este registrado
+    Entonces registrar la factura.
+    Cuando la factura este registrada
+    Entonces mostrar el total de la factura.
+
+Escenario: Mostrar stock
+    Cuando se ingrese a la aplicacion
+    Entonces mostrar electrodomesticos con descripciones y precios.
