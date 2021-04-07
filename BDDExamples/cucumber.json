@@ -1,0 +1,124 @@
+[
+  {
+    "description": "    Para administrar el directorio como desarrollador quiero asegurarme\n    de que las operaciones crud a travez de la api rest funcione bien",
+    "keyword": "Feature",
+    "name": "Directory Service",
+    "line": 2,
+    "id": "directory-service",
+    "tags": [
+      {
+        "name": "@DirectoryService",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\directory.feature",
+    "elements": [
+      {
+        "id": "directory-service;crear-un-contacto",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "crear un contacto",
+        "tags": [
+          {
+            "name": "@DirectoryService",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "un contacto {\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}",
+            "match": {
+              "location": "src\\steps\\directory.js:5"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 0,
+              "error_message": "TypeError: Cannot set property '{\"id\":99,\"name\":\"Dwayne Klocko\",\"email\":\"Rene30@hotmail.com\",\"phoneNumber\":\"1-876-420-9890\"}' of undefined\n    at World.<anonymous> (C:\\Users\\fasierra\\Documents\\NodeJs\\BDDExamples\\src\\steps\\directory.js:6:27)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "envie una solicitud POST a /directory",
+            "match": {
+              "location": "src\\steps\\directory.js:9"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "yo obtengo el codigo de respuesta 201",
+            "match": {
+              "location": "src\\steps\\directory.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "directory-service;crear-un-contacto",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "crear un contacto",
+        "tags": [
+          {
+            "name": "@DirectoryService",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "un contacto {\"id\":7,\"name\":\"Ian Weimann DVM\",\"email\":\"Euna_Bergstrom@hotmail.com\",\"phoneNumber\":\"(297) 962-1879\"}",
+            "match": {
+              "location": "src\\steps\\directory.js:5"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 0,
+              "error_message": "TypeError: Cannot set property '{\"id\":7,\"name\":\"Ian Weimann DVM\",\"email\":\"Euna_Bergstrom@hotmail.com\",\"phoneNumber\":\"(297) 962-1879\"}' of undefined\n    at World.<anonymous> (C:\\Users\\fasierra\\Documents\\NodeJs\\BDDExamples\\src\\steps\\directory.js:6:27)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "envie una solicitud POST a /directory",
+            "match": {
+              "location": "src\\steps\\directory.js:9"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "yo obtengo el codigo de respuesta 201",
+            "match": {
+              "location": "src\\steps\\directory.js:13"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 {
-  "name": "BDDExamples",
+  "name": "BDDElectrodomesticos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "cucumber": "^6.0.5",
-    "cucumber-html-reporter": "^5.2.0"    
+    "cucumber-html-reporter": "^5.2.0"
   },
   "dependencies": {
     "axios": "^0.20.0",

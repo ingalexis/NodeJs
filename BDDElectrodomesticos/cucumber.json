@@ -1,0 +1,165 @@
+[
+  {
+    "description": "    Se valida la venta, registro de factura y visualización de electrodomesticos",
+    "keyword": "Feature",
+    "name": "Pruebas a la venta y consulta de Electrodomesticos",
+    "line": 2,
+    "id": "pruebas-a-la-venta-y-consulta-de-electrodomesticos",
+    "tags": [
+      {
+        "name": "@Electrodomesticos",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\electrodomesticos.feature",
+    "elements": [
+      {
+        "id": "pruebas-a-la-venta-y-consulta-de-electrodomesticos;vender-electrodomestico",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Vender electrodomestico",
+        "tags": [
+          {
+            "name": "@Electrodomesticos",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "se consulte un electrodomestico con el codigo 1",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "la consulta arroje el valor 1",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "agregar el producto a la factura con el codigo 1",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "el producto este registrado",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "registrar la factura",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "la factura este registrada",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "el total de la factura es 1000",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "pruebas-a-la-venta-y-consulta-de-electrodomesticos;mostrar-stock",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Mostrar stock",
+        "tags": [
+          {
+            "name": "@Electrodomesticos",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "se ingrese a la aplicacion",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "mostrar electrodomesticos con descripciones y precios",
+            "match": {
+              "location": "src\\steps\\electrodomesticos.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
