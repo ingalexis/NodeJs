@@ -13,3 +13,8 @@ Escenario: Vender electrodomestico
 Escenario: Mostrar stock
     Cuando se ingrese a la aplicacion
     Entonces mostrar electrodomesticos con descripciones y precios.
+
+//comandos 
+
+//json-server --watch db.json -p 80
+//node report.js

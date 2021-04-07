@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/"
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 1",
+    "report": "node report.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cucumber": "^6.0.5",
-    "cucumber-html-reporter": "^5.2.0"    
+    "cucumber-html-reporter": "^5.2.0"
   },
   "dependencies": {
     "axios": "^0.20.0",

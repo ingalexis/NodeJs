@@ -12,3 +12,12 @@ Scenario Outline: crear un contacto
       | request                                                                                               |
       | {"id":99,"name":"Dwayne Klocko","email":"Rene30@hotmail.com","phoneNumber":"1-876-420-9890"}          |
       | {"id":7,"name":"Ian Weimann DVM","email":"Euna_Bergstrom@hotmail.com","phoneNumber":"(297) 962-1879"} |
+
+Scenario Outline: get contact
+    Given The contact with <id> exist
+    When I send GET request to /directory
+    Then I receive <response>
+    Examples:
+      | id | response                                                                                                                                      |
+      | 99 | {"id":99,"name":"Dwayne Klocko","email":"Rene30@hotmail.com","phoneNumber":"1-876-420-9890"}         |
+      | 7  | {"id":7,"name":"Ian Weimann DVM","email":"Euna_Bergstrom@hotmail.com","phoneNumber":"(297) 962-1879"} |
