@@ -15,12 +15,12 @@ When('la consulta arroje el valor {int}', id => {
     assert.equal(id, electro.id);
 });
 
-Then('agregar el producto a la factura con el codigo {int}', id => {
+Given('agregar el producto a la factura con el codigo {int}', id => {
     factura = agregarProducto(id);
     ide = id;
 });
 
-Given('el producto este registrado', () => {
+When('el producto este registrado', () => {
     assert.equal(factura.id, ide);
 });
 
