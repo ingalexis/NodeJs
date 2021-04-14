@@ -1,0 +1,117 @@
+[
+  {
+    "description": "    Como usuario del banco online\n    yo quiero visitar el sitio web del banco\n    para yo poder hacer login y entrar a mi cuenta",
+    "keyword": "Feature",
+    "name": "Login banco",
+    "line": 2,
+    "id": "login-banco",
+    "tags": [
+      {
+        "name": "@LoginBanco",
+        "line": 1
+      }
+    ],
+    "uri": "test\\features\\login.feature",
+    "elements": [
+      {
+        "id": "login-banco;visitar-la-pagina-de-login",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Visitar la pagina de login",
+        "tags": [
+          {
+            "name": "@LoginBanco",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "utils\\hooks.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3251000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "yo deberia ver una caja de texto para ingresar a mi email",
+            "match": {
+              "location": "steps\\loginSteps.js:9"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3014000000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 3000 milliseconds\n    at Timeout._onTimeout (C:\\Users\\fasierra\\Documents\\NodeJs\\Selenium\\node_modules\\cucumber\\lib\\user_code_runner.js:93:22)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "yo deberia ver una caja de texto para ingresar la password",
+            "match": {
+              "location": "steps\\loginSteps.js:14"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "yo deberia ver un boton para sign",
+            "match": {
+              "location": "steps\\loginSteps.js:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "yo deberia ver un login header con el texto \"Login banco online\"",
+            "match": {
+              "location": "steps\\loginSteps.js:24"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "yo deberia ver un label de direccion email con el texto \"Email address\"",
+            "match": {
+              "location": "steps\\loginSteps.js:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "utils\\hooks.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 268000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

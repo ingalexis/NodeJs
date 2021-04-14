@@ -1,0 +1,12 @@
+Scenario: Intento de login sin credenciales
+
+Scenario: Intento de login con credenciales incorrectas
+
+Scenario: Intento de login con credenciales correctas
+
+89.0.4389
+
+https://chromedriver.storage.googleapis.com/LATEST_RELEASE_xx.xx.x.x
+
+13:42
+https://chromedriver.storage.googleapis.com/index.html?path=xxxxxx/

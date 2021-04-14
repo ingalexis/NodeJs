@@ -1,0 +1,100 @@
+IBM Cloud
+
+cloudant 
+env:test
+
+Credenciales de servicio - Crear
+copiar, 
+
+Gestionar - launch dashboard
+create database - nombre y non-partitioned - create
+create documento
+{
+  "_id": "doc1",
+  "firstName": "Fabian",
+  "lastName": "Sierra",
+  "age": 25,
+  "location": "Villavicencio"
+}
+
+query
+{
+   "selector": {
+      "firstName": "Fabian"
+   }
+}
+run query
+{
+   "selector": {
+      "firstName": "Fabian"
+   },
+   "fields": [
+      "firstName"
+   ]
+}
+{
+   "selector": {
+      "age": {
+         "$gt": 24
+      }
+   },
+   "fields": [
+      "firstName"
+   ]
+}
+gt = mayor que
+lt = menor que
+eq = igual que
+
+{
+   "index": {
+      "fields": [
+         "age"
+      ],
+      "partial_filter_selector": {
+        "age": {
+          "$gt": 20
+        },
+      },
+      "ddoc": "doc_1",
+      "type": "json"
+   }
+}
+
+{
+   "selector": {},
+   "fields": [
+      "age"
+   ],
+   "sort": [
+      {
+         "age": "desc"
+      }
+   ]
+}
+
+{
+   "selector": {},
+   "fields": [
+      "firstName",
+      "age"
+   ],
+   "sort": [
+      {
+         "age": "asc"
+      }
+   ],
+   "use_index": "_design/doc_1"
+}
+
+
+// datamaker
+
+npm install -g datamaker
+npm install -g couchimport
+            
+set COUCH_URL=https://b7677b3d-140e-41bf-8c4b-5727567fbc5f-bluemix.cloudantnosqldb.appdomain.cloud
+set COUCH_DATABASE=datamaker
+set IAM_API_KEY=IYsNDGkeLopMAXWqPrhPytfxqL8zbazmHam0DuRYh19C
+
+datamaker -t .\template.json -f json -i 10000 | couchimport --db datamaker --type jsonl --url https://b7677b3d-140e-41bf-8c4b-5727567fbc5f-bluemix.cloudantnosqldb.appdomain.cloud

@@ -1,0 +1,28 @@
+{
+  "name": "Selenium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "./node_modules/.bin/cucumber-js test/features --require utils/ --require steps/ --world-parameters {\\\"browserName\\\":\\\"chrome\\\"} --format json:test/results/chrome.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^89.0.0",
+    "express": "4.16.3",
+    "pug": "2.0.3",
+    "require": "2.4.20"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "cucumber": "4.2.1",
+    "selenium-webdriver": "3.6.0",
+    "cucumber-html-reporter": "4.0.3"
+  },
+  "config": {
+    "port": 9294
+  }
+}
