@@ -1,0 +1,30 @@
+Descargar gradle y pegar en /opt/gradle
+https://gradle.org/releases/
+
+package.json
+{
+	"name": "example",
+	"version": "0.0.0",
+	"dependencies": {
+		"figlet": "^1.2.0"
+	}
+}
+
+src/index.js
+const figlet = require('figlet');
+
+const out =  figlet.textSync('ALEXIS', {found: 'standar'});
+console.log(out);
+
+
+// aquitectura limpia
+578  export PATH=$PATH:/opt/gradle/gradle-6.7.1/bin
+  581  gradle index
+  582  env
+  583  export DATABASE_URI=mongodb://root:example@localhost:27017/?authMechanism=DEFAULT
+  584  gradle index
+  585  gradle test
+
+  curl -d '{"payload":{"firstName":"Briayan","lastName": "Piñeros","email": "hackbray@gmail.com","password":1234}}' -H "Content-Type: application/json" -X POST http://localhost:3000/users
+
+  mongodb://root:example@localhost:27017/?authMechanism=DEFAULT
